@@ -55,6 +55,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
             @Override
             public void onClick(View v) {
                 if (customClickListener != null) {
+                    int position = holder.getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION) {
                         customClickListener.onDeleteClick(position);
                     }
