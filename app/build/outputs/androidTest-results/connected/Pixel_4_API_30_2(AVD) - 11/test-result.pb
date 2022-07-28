@@ -1,10 +1,10 @@
 
-”
+•
 [
-MainActivityTestcom.example.cardiacmonitorallActivityTest2»¼Š—Àı°à:Ù¼Š—€Ù¨Ç"Ñ
+SplashScreenTestcom.example.cardiacmonitortestSplashScreen2øìŠ—ÀÁÒˆ:ûìŠ—À‰‘"Ò
 
-logcatandroid»
-¸/Users/swassow/Desktop/Cardiac-Monitor/app/build/outputs/androidTest-results/connected/Pixel_4_API_30_2(AVD) - 11/logcat-com.example.cardiacmonitor.MainActivityTest-allActivityTest.txt"
+logcatandroid¼
+¹/Users/swassow/Desktop/Cardiac-Monitor/app/build/outputs/androidTest-results/connected/Pixel_4_API_30_2(AVD) - 11/logcat-com.example.cardiacmonitor.SplashScreenTest-testSplashScreen.txt"
 
 device-infoandroidƒ
 €/Users/swassow/Desktop/Cardiac-Monitor/app/build/outputs/androidTest-results/connected/Pixel_4_API_30_2(AVD) - 11/device-info.pb"

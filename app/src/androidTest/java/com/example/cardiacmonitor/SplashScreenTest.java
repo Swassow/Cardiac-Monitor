@@ -6,6 +6,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
+import android.os.SystemClock;
+
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.filters.LargeTest;
 
@@ -26,6 +28,7 @@ public class SplashScreenTest {
     public void testSplashScreen() {
         onView(withId(R.id.ic_logo)).check(matches(isDisplayed()));
         onView(withText("Cardiac Recorder")).check(matches(isDisplayed()));
+        SystemClock.sleep(2000);
     }
 
 }

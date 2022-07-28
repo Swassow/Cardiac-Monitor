@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<testsuite name="com.example.cardiacmonitor.MainActivityTest" tests="1" failures="0" errors="0" skipped="0" time="31.124" timestamp="2022-07-28T14:34:02" hostname="localhost">
+<testsuite name="com.example.cardiacmonitor.SplashScreenTest" tests="1" failures="0" errors="0" skipped="0" time="3.329" timestamp="2022-07-28T16:16:59" hostname="localhost">
   <properties>
     <property name="device" value="Pixel_4_API_30_2(AVD) - 11" />
     <property name="flavor" value="" />
     <property name="project" value=":app" />
   </properties>
-  <testcase name="allActivityTest" classname="com.example.cardiacmonitor.MainActivityTest" time="29.585" />
+  <testcase name="testSplashScreen" classname="com.example.cardiacmonitor.SplashScreenTest" time="2.464" />
 </testsuite>
