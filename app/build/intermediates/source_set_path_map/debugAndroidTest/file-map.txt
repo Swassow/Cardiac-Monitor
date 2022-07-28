@@ -1,0 +1,9 @@
+com.example.cardiacmonitor.test.app-core-1.4.1-alpha04-0 /Users/swassow/.gradle/caches/transforms-3/3dfba6f1e5819c2ca9422993d9f3ad92/transformed/core-1.4.1-alpha04/res
+com.example.cardiacmonitor.test.app-annotation-experimental-1.1.0-1 /Users/swassow/.gradle/caches/transforms-3/e36aaea95b1e10850d139e7025f21ff0/transformed/annotation-experimental-1.1.0/res
+com.example.cardiacmonitor.test.app-androidTest-2 /Users/swassow/Desktop/Cardiac-Monitor/app/build/generated/res/resValues/androidTest/debug
+com.example.cardiacmonitor.test.app-androidTest-3 /Users/swassow/Desktop/Cardiac-Monitor/app/build/generated/res/rs/androidTest/debug
+com.example.cardiacmonitor.test.app-mergeDebugAndroidTestResources-4 /Users/swassow/Desktop/Cardiac-Monitor/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.cardiacmonitor.test.app-mergeDebugAndroidTestResources-5 /Users/swassow/Desktop/Cardiac-Monitor/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.cardiacmonitor.test.app-merged_res-6 /Users/swassow/Desktop/Cardiac-Monitor/app/build/intermediates/merged_res/debugAndroidTest
+com.example.cardiacmonitor.test.app-androidTest-7 /Users/swassow/Desktop/Cardiac-Monitor/app/src/androidTest/res
+com.example.cardiacmonitor.test.app-androidTestDebug-8 /Users/swassow/Desktop/Cardiac-Monitor/app/src/androidTestDebug/res
