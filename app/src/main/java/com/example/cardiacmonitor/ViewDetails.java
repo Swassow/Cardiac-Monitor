@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,12 +32,13 @@ public class ViewDetails extends AppCompatActivity {
         setContentView(R.layout.activity_view_details);
         Intent intent = getIntent();
         int index = intent.getIntExtra("index", 0);
-        date = findViewById(R.id.dateValue);
-        time = findViewById(R.id.timeValue);
-        systolic = findViewById(R.id.systolicValue);
-        diastolic = findViewById(R.id.diastolicValue);
-        heartRate = findViewById(R.id.heartRateValue);
-        comment = findViewById(R.id.commentValue);
+        date = findViewById(R.id.vdateValue);
+        time = findViewById(R.id.vtimeValue);
+        Button backButton = findViewById( R.id.backButton);
+        systolic = findViewById(R.id.vsystolicValue);
+        diastolic = findViewById(R.id.vdiastolicValue);
+        heartRate = findViewById(R.id.vheartRateValue);
+        comment = findViewById(R.id.vComment);
         editButton = findViewById(R.id.editButton);
         loadData();
         modelClass = arrayList.get(index);
@@ -46,6 +48,12 @@ public class ViewDetails extends AppCompatActivity {
         diastolic.setText("" + modelClass.getDiastolic());
         heartRate.setText("" + modelClass.getHeartRate());
         comment.setText("" + modelClass.getComment());
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,28 +1,32 @@
 package com.example.cardiacmonitor;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.icu.text.AlphabeticIndex;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
-    public static RecyclerAdapter recyclerAdapter;
-    public static ArrayList<ModelClass> arrayList;
+    public static RecordAdapter recordAdapter;
+    LinearLayoutManager linearLayoutManager;
+    ModelClass record;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     Gson gson;
-    FloatingActionButton addButton;
-    ModelClass modelClass;
+    public static ArrayList<ModelClass> recordsArrayList;
+    ImageView addButton;
 
 
     @Override
@@ -30,29 +34,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addButton = findViewById(R.id.addButton);
-        loadData();
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerAdapter = new RecyclerAdapter(this,arrayList, ContextCompat.getColor(MainActivity.this, R.color.colorGreen), ContextCompat.getColor(MainActivity.this, R.color.colorRed));
-        recyclerView.setAdapter(recyclerAdapter);
-        recyclerView.setLayoutManager( new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        recyclerAdapter.setCustomClickListener(new RecyclerAdapter.CustomClickListener() {
+        // recordsArrayList = new ArrayList<>();
+        retrieveData();
+        recyclerView = findViewById(R.id.recycler);
+        linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+        recordAdapter = new RecordAdapter(this,recordsArrayList, ContextCompat.getColor(MainActivity.this, R.color.colorGreen), ContextCompat.getColor(MainActivity.this, R.color.colorRed));
+
+        recyclerView.setAdapter(recordAdapter);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recordAdapter.setCustomClickListener(new RecordAdapter.CustomClickListener() {
             @Override
-            public void cusOnClick(int position, View v) {
+            public void customOnClick(int position, View v) {
                 Intent intent = new Intent(MainActivity.this, ViewDetails.class);
                 intent.putExtra("index",position);
                 startActivity(intent);
             }
+
             @Override
-            public void onDeleteClick(int position) {
-                arrayList.remove(position);
-                recyclerAdapter.notifyItemRemoved(position);
-                saveData();
-                Toast.makeText(MainActivity.this,"Data Deleted!",Toast.LENGTH_SHORT).show();
+            public void customOnLongClick(int position, View v) {
+
             }
 
+            @Override
+            public void onDeleteClick(int position) {
+                recordsArrayList.remove(position);
+                recordAdapter.notifyItemRemoved(position);
+                recordAdapter.notifyItemRangeChanged(position,recordsArrayList.size());
+                saveData();
+                Toast.makeText(MainActivity.this,"Deleted successful!",Toast.LENGTH_SHORT).show();
+            }
 
         });
+
+
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,26 +76,82 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+
+
+
+
+
+
+/*        record = new Record("11-12-21","11:21",126,121,34);
+        recordsArrayList.add(record);
+        recordsArrayList
+                .add(new Record("01-01-01","11:21",126,121,34));
+        saveData();
+        recordsArrayList
+                .add(new Record("01-01-01","11:21",126,121,34));*/
+
+
+
+        //recordAdapter.notifyDataSetChanged();
+
+
+
+
+
+
+
+
+
+        //String date, String time, int systolic, int diastolic, int heart_rate, String comment
+
+
+
+/*
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("foo");
+        list.add("baar");
+        JSONArray jsArray = new JSONArray(list);
+        JSONObject obj = ...
+        String jsonString = obj.toString(4);
+        ArrayList<String> listdata = new ArrayList<String>();
+        JSONArray jArray = (JSONArray)jsonObject;
+        if (jArray != null) {
+            for (int i=0;i<jArray.length();i++){
+                listdata.add(jArray.getString(i));
+            }
+        }*/
+        // recordAdapter = new RecordAdapter(this, ContextCompat.getColor(this,R.color.good),ContextCompat.getColor(this,R.color.normal),ContextCompat.getColor(this,R.color.critical),recordList);
     }
+
+    /**
+     * method for saving data to shared preference
+     */
     private void saveData()
     {
-        sharedPreferences = getSharedPreferences("sharedpreference",MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("shared",MODE_PRIVATE);
         editor = sharedPreferences.edit();
         gson = new Gson();
-        String jsonString = gson.toJson(arrayList);
-        editor.putString("details",jsonString);
+        String jsonString = gson.toJson(recordsArrayList);
+        editor.putString("record",jsonString);
         editor.apply();
     }
-    private void loadData()
+
+    /**
+     * method for retrieving data from shared preference
+     */
+    private void retrieveData()
     {
-        sharedPreferences = getSharedPreferences("sharedpreference",MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("shared",MODE_PRIVATE);
         gson = new Gson();
-        String jsonString = sharedPreferences.getString("details",null);
+        String jsonString = sharedPreferences.getString("record",null);
         Type type = new TypeToken<ArrayList<ModelClass>>(){}.getType();
-        arrayList = gson.fromJson(jsonString,type);
-        if(arrayList ==null)
+        recordsArrayList = gson.fromJson(jsonString,type);
+        if(recordsArrayList ==null)
         {
-            arrayList = new ArrayList<ModelClass>();
+            recordsArrayList = new ArrayList<ModelClass>();
         }
+
     }
+
+
 }
