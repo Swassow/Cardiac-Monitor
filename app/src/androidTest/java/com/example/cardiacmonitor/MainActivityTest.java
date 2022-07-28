@@ -74,32 +74,43 @@ public class MainActivityTest {
          */
         // Match the text in an item below the fold and check that it's displayed.
         onView(withId(R.id.editButton)).perform(click());
+        SystemClock.sleep(1000);
         onView(withId(R.id.uDateValue)).perform(ViewActions.clearText());
+        SystemClock.sleep(1000);
         onView(withId(R.id.uDateValue)).perform(ViewActions.typeText("11/10/2021"));
+        SystemClock.sleep(1000);
         //onView(withId(R.id.uTimeValue)).perform(ViewActions.clearText());
         //onView(withId(R.id.uTimeValue)).perform(ViewActions.typeText("10:19"));
         onView(withId(R.id.uSystolicValue)).perform(ViewActions.clearText());
+        SystemClock.sleep(1000);
         onView(withId(R.id.uSystolicValue)).perform(ViewActions.typeText("110"));
+        SystemClock.sleep(1000);
         onView(withId(R.id.uDiastolicValue)).perform(ViewActions.clearText());
+        SystemClock.sleep(1000);
         onView(withId(R.id.uDiastolicValue)).perform(ViewActions.typeText("80"));
         pressBack();
+        SystemClock.sleep(1000);
         onView(withId(R.id.uHeartRateValue)).perform(ViewActions.clearText());
+        SystemClock.sleep(1000);
         onView(withId(R.id.uHeartRateValue)).perform(ViewActions.typeText("69"));
         pressBack();
+        SystemClock.sleep(1000);
         onView(withId(R.id.uCommentValue)).perform(ViewActions.clearText());
+        SystemClock.sleep(1000);
         onView(withId(R.id.uCommentValue)).perform(ViewActions.typeText("Updated"));
         pressBack();
+        SystemClock.sleep(1000);
         onView(withId(R.id.updateButton)).perform(click());
 
-        SystemClock.sleep(2000);
+        SystemClock.sleep(1000);
 
         /*
         To delete data ;
         */
-        SystemClock.sleep(3000);
+        SystemClock.sleep(2000);
         onView(withId(R.id.recycler)).perform(
                 RecyclerViewActions.actionOnItemAtPosition(0, MyViewAction.clickChildViewWithId(R.id.deleteIm)));
-        SystemClock.sleep(3000);
+        SystemClock.sleep(2000);
 
 
     }

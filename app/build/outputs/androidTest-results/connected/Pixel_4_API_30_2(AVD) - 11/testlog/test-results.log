@@ -1,21 +1,21 @@
-INSTRUMENTATION_STATUS: class=com.example.cardiacmonitor.MainActivityTest
+INSTRUMENTATION_STATUS: class=com.example.cardiacmonitor.SplashScreenTest
 INSTRUMENTATION_STATUS: current=1
 INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
 INSTRUMENTATION_STATUS: numtests=1
 INSTRUMENTATION_STATUS: stream=
-com.example.cardiacmonitor.MainActivityTest:
-INSTRUMENTATION_STATUS: test=allActivityTest
+com.example.cardiacmonitor.SplashScreenTest:
+INSTRUMENTATION_STATUS: test=testSplashScreen
 INSTRUMENTATION_STATUS_CODE: 1
-INSTRUMENTATION_STATUS: class=com.example.cardiacmonitor.MainActivityTest
+INSTRUMENTATION_STATUS: class=com.example.cardiacmonitor.SplashScreenTest
 INSTRUMENTATION_STATUS: current=1
 INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
 INSTRUMENTATION_STATUS: numtests=1
 INSTRUMENTATION_STATUS: stream=.
-INSTRUMENTATION_STATUS: test=allActivityTest
+INSTRUMENTATION_STATUS: test=testSplashScreen
 INSTRUMENTATION_STATUS_CODE: 0
 INSTRUMENTATION_RESULT: stream=
 
-Time: 29.986
+Time: 2.751
 
 OK (1 test)
 

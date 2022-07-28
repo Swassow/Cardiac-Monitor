@@ -1,20 +1,20 @@
-# 2022-07-28T14:34:03.095Z:
+# 2022-07-28T16:16:59.999Z:
 test_suite_meta_data {
   scheduled_test_case_count: 1
 }
 test_status: PASSED
 test_result {
   test_case {
-    test_class: "MainActivityTest"
+    test_class: "SplashScreenTest"
     test_package: "com.example.cardiacmonitor"
-    test_method: "allActivityTest"
+    test_method: "testSplashScreen"
     start_time {
-      seconds: 1659018811
-      nanos: 739000000
+      seconds: 1659025016
+      nanos: 555000000
     }
     end_time {
-      seconds: 1659018841
-      nanos: 418000000
+      seconds: 1659025019
+      nanos: 59000000
     }
   }
   test_status: PASSED
@@ -24,7 +24,7 @@ test_result {
       namespace: "android"
     }
     source_path {
-      path: "/Users/swassow/Desktop/Cardiac-Monitor/app/build/outputs/androidTest-results/connected/Pixel_4_API_30_2(AVD) - 11/logcat-com.example.cardiacmonitor.MainActivityTest-allActivityTest.txt"
+      path: "/Users/swassow/Desktop/Cardiac-Monitor/app/build/outputs/androidTest-results/connected/Pixel_4_API_30_2(AVD) - 11/logcat-com.example.cardiacmonitor.SplashScreenTest-testSplashScreen.txt"
     }
   }
   output_artifact {
