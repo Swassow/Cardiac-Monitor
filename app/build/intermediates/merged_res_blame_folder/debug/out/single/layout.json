@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-mergeDebugResources-33:/layout/activity_splash_screen.xml",
+        "source": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-main-36:/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-mergeDebugResources-33:/layout/fragment_first.xml",
+        "source": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-main-36:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "com.example.cardiacmonitor.app-mergeDebugResources-33:/layout/activity_update_details.xml",
+        "source": "com.example.cardiacmonitor.app-main-36:/layout/activity_update_details.xml"
+    },
+    {
+        "merged": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-mergeDebugResources-33:/layout/activity_add_details.xml",
+        "source": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-main-36:/layout/activity_add_details.xml"
+    },
+    {
+        "merged": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-mergeDebugResources-33:/layout/activity_main.xml",
+        "source": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-main-36:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-mergeDebugResources-33:/layout/activity_view_details.xml",
+        "source": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-main-36:/layout/activity_view_details.xml"
+    },
+    {
+        "merged": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-mergeDebugResources-33:/layout/row_item.xml",
+        "source": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-main-36:/layout/row_item.xml"
+    },
+    {
+        "merged": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-mergeDebugResources-33:/layout/fragment_second.xml",
+        "source": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-main-36:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-mergeDebugResources-33:/layout/activity_update_details.xml",
+        "source": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-main-36:/layout/activity_update_details.xml"
+    },
+    {
+        "merged": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-mergeDebugResources-33:/layout/content_main.xml",
+        "source": "/Users/swassow/.gradle/daemon/7.3.3/com.example.cardiacmonitor.app-main-36:/layout/content_main.xml"
+    }
+]
